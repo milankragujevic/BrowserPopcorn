@@ -1,8 +1,4 @@
-﻿<?php
-require __DIR__ . '/includes/config.php';
-require __DIR__ . '/includes/functions.php';
-?>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <head>
 	<meta charset="utf-8"/>
 	<title>Popcorn Time in your browser!</title>
