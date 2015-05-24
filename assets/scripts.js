@@ -25,6 +25,7 @@ function loadMovies() {
 function loadMovie(id) {
 	$('.movies').fadeOut(300);
 	$('.search').fadeOut(300);
+	$('.load-more').fadeOut(300);
 	$('.search-box').val('');
 	$.get('http://api.popcorntimefree.info/?action=details&id=' + id, function(movie) {
 		$('.movie-infobox .movie-poster img').attr('src', movie.poster);
