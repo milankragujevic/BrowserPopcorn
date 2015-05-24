@@ -76,6 +76,7 @@ html, body {
 
 .movies {
 	margin-left: 20px;
+	clear: both;
 }
 
 .movies .movie {
@@ -236,4 +237,28 @@ html, body {
 	text-align: center;
 	font-size: 17px;
 	display: none;
+}
+
+.warning {
+	background-color: #FDFFE2;
+	padding: 0px;
+}
+
+.warning p {
+	text-align: center;
+	color: #404040;
+}
+
+.load-more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.load-more a {
+	padding: 10px 20px;
+	margin: auto;
+	display: inline-block;
+	background-color: #F3F2EF;
+	color: #404040;
+	text-decoration: none;
 }
