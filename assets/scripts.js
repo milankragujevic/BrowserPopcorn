@@ -35,7 +35,7 @@ function loadMovie(id) {
 		$('.movie-infobox .movie-meta .movie-released').html(movie.released);
 		$('.movie-infobox .movie-meta .movie-votes').html(movie.votes);
 		$('.player').fadeIn(300);
-		$('.player-object video source').attr('src', movie.stream);
+		$('.player-object video').attr('src', movie.stream);
 	});
 }
 
@@ -58,7 +58,7 @@ $(document).ready(function() {
 		loadMovie($(this).attr('data-id'));
 	});
 	$('.home-button img').click(function() {
-		jwplayer('playerXJXweHTdLqjJ').remove();
+		$('.player-object video').attr('src', '');
 		$('.player').fadeOut(300);
 		$('.search').fadeIn(300);
 		$('.movies').fadeIn(300);
