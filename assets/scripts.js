@@ -34,35 +34,8 @@ function loadMovie(id) {
 		$('.movie-infobox .movie-meta .movie-rating').html(movie.rating);
 		$('.movie-infobox .movie-meta .movie-released').html(movie.released);
 		$('.movie-infobox .movie-meta .movie-votes').html(movie.votes);
-		$('.loading-player').fadeIn(300);
 		$('.player').fadeIn(300);
-		$.get('http://api.popcorntimefree.info/?action=subtitles&id=' + id, function(subtitles) {
-			var tracks = [];
-			$.each(subtitles, function(language, file) {
-				tracks.push({ 
-					file: file,
-					label: language,
-					kind: 'captions'
-				});
-			});
-			$('.loading-player').fadeOut(300);
-			jwplayer.key = '5XXb+w0txH2+cnkwOtAOWXU39zFQbZ6VT9mOA6R83tk=';
-			jwplayer('playerXJXweHTdLqjJ').setup({
-				playlist: [{
-					sources: [{
-						file: movie.stream,
-						type: 'video/mp4',
-						default: true
-					}],
-					image: '',
-					tracks: tracks
-				}],
-				width: '100%',
-				aspectratio: '16:9',
-				autostart: 'true',
-				skin: 'glow'
-			});
-		});
+		$('.player-object video source').attr('src', movie.stream);
 	});
 }
 
@@ -74,11 +47,13 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	loadMovies();
-	$('.search-box').on('keydown', _.debounce(function() {
-		window.page = 1;
-		$('.load-more').fadeIn(300);
-		loadMovies();
-	}, 1000));
+	$('.search-box').on('keydown', function(e) {
+		if(e.keyCode == 13) {
+			window.page = 1;
+			$('.load-more').fadeIn(300);
+			loadMovies();
+		}
+	});
 	$('.movies').on('click', '.movie', function() {
 		loadMovie($(this).attr('data-id'));
 	});
