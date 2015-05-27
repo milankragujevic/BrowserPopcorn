@@ -59,6 +59,11 @@ html, body {
 	text-align: center;
 }
 
+.home.section {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
 .search {
 	max-width: 480px;
 	margin: auto;
