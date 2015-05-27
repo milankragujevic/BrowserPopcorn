@@ -40,18 +40,18 @@ html, body {
 }
 
 .intro {
-	background-color: #F3F2EF;
+	background-image: linear-gradient(120deg, #155799, #159957);
 }
 
 .intro h1 {
-	color: #404040;
+	color: #FCFDFD;
 	margin: 0px;
 	text-align: center;
 	font-size: 34px;
 }
 
 .intro h4 {
-	color: #404040;
+	color: #FCFDFD;
 	margin: 0px;
 	margin-top: 20px;
 	font-weight: 600;
