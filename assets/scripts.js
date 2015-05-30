@@ -15,8 +15,10 @@ function loadMovies() {
 		}
 		if(data.pages < 2 || data.pages == data.page) {
 			$('.load-more').fadeOut(300);
+			window.showLoadMore = false;
 		} else {
 			$('.load-more').fadeIn(300);
+			window.showLoadMore = true;
 		}
 	});
 	$('.loading').fadeOut(300);
@@ -62,5 +64,10 @@ $(document).ready(function() {
 		$('.player').fadeOut(300);
 		$('.search').fadeIn(300);
 		$('.movies').fadeIn(300);
+		if(window.showLoadMore) {
+			$('.load-more').fadeIn(300);
+		} else {
+			$('.load-more').fadeOut(300);
+		}
 	});
 });
