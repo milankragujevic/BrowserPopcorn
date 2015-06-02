@@ -1,73 +1,52 @@
+/*
+  _____                              _______ _                
+ |  __ \                            |__   __(_)               
+ | |__) |__  _ __   ___ ___  _ __ _ __ | |   _ _ __ ___   ___ 
+ |  ___/ _ \| '_ \ / __/ _ \| '__| '_ \| |  | | '_ ` _ \ / _ \
+ | |  | (_) | |_) | (_| (_) | |  | | | | |  | | | | | | |  __/
+ |_|   \___/| .__/ \___\___/|_|  |_| |_|_|  |_|_| |_| |_|\___|
+            | |                                               
+            |_|                                               
+
+*/
+
 function loadMovies() {
-	var query = $('.search-box').val();
-	$('.loading').fadeIn(300);
-	if(window.page == '1') {
-		$('.movies').html('');
-	}
-	$.get('http://api.popcorntimefree.info/?action=movies&query=' + encodeURIComponent(query) + '&page=' + window.page, function(data) {
-		if(data.pages == 0) {
+	var query = $('.search-field input').val();
+	$('.loading-search').fadeIn(300);
+	$('.search-results-inner').html('');
+	$.get('http://api.popcorntimefree.info/movies.php?query=' + encodeURIComponent(query), function(movies) {
+		if(movies == null) {
 			$('.no-results').fadeIn(300);
 		} else {
 			$('.no-results').fadeOut(300);
-			$.each(data.data, function(i, movie) {
-				$('.movies').append('<div class="movie" data-id="' + movie.id + '"><div class="movie-poster"><img width="190" height="300" src="' + movie.poster + '" /></div><div class="movie-info"><span class="movie-title">' + movie.title + '</span><span class="movie-year">' + movie.year + '</span></div></div>');
+			$.each(movies, function(i, movie) {
+				$('.search-results-inner').append('<div class="search-result"><div class="movie-poster"><img src="' + movie.poster + '" /></div><div class="movie-informations"><div class="movie-title">' + movie.title + ' (' + movie.year + ')</div><div class="movie-info-section"><div class="movie-stars"><div class="movie-stars-full" style="width:' + movie.rating * 10 + '%"></div></div><div class="movie-rating"><span class="movie-rating-value">' + movie.rating + '</span>/10</div><div class="movie-runtime"></div><div class="movie-genres">' + movie.genres + '</div><div class="clearfix"></div></div><div class="movie-plot"><p>' + movie.plot + '</p></div><div class="movie-info-section-second">Director: <span class="movie-info-director">' + movie.director + '</span>, Starring: <span class="movie-info-actors">' + movie.actors + '</span></div><div class="play-button"><a href="#" data-imdbID="' + movie.id + '" data-stream="' + movie.stream + '">Play Now</a></div></div><div class="clearfix"></div></div>');
 			});
 		}
-		if(data.pages < 2 || data.pages == data.page) {
-			$('.load-more').fadeOut(300);
-			window.showLoadMore = false;
-		} else {
-			$('.load-more').fadeIn(300);
-			window.showLoadMore = true;
-		}
-	});
-	$('.loading').fadeOut(300);
-}
-
-function loadMovie(id) {
-	$('.movies').fadeOut(300);
-	$('.search').fadeOut(300);
-	$('.load-more').fadeOut(300);
-	$('.search-box').val('');
-	$.get('http://api.popcorntimefree.info/?action=details&id=' + id, function(movie) {
-		$('.movie-infobox .movie-poster img').attr('src', movie.poster);
-		$('.movie-infobox .movie-title').html(movie.title + ' (' + movie.year + ')');
-		$('.movie-infobox .movie-description p').html(movie.plot);
-		$('.movie-infobox .movie-meta .movie-rating').html(movie.rating);
-		$('.movie-infobox .movie-meta .movie-released').html(movie.released);
-		$('.movie-infobox .movie-meta .movie-votes').html(movie.votes);
-		$('.player').fadeIn(300);
-		$('.player-object video').attr('src', movie.stream);
+		$('.intro-section').fadeOut(300);
+		$('.results-section').fadeIn(300);
+		$('.loading-search').fadeOut(300);
 	});
 }
 
 $(document).ready(function() {
-	window.page = 1;
-	$('.load-more a').click(function(e) {
-		window.page++;
-		loadMovies();
-		e.preventDefault();
-	});
-	loadMovies();
-	$('.search-box').on('keydown', function(e) {
+	$('.search-field input').on('keydown', function(e) {
 		if(e.keyCode == 13) {
-			window.page = 1;
-			$('.load-more').fadeIn(300);
 			loadMovies();
 		}
 	});
-	$('.movies').on('click', '.movie', function() {
-		loadMovie($(this).attr('data-id'));
+	$('.collapsed-header img, .home-button img').click(function() {
+		$('.intro-section').fadeIn(300);
+		$('.results-section').fadeOut(300);
+		$('.player-section').fadeOut(300);
+		$('video').attr('src', '');
+		$('.search-field input').val('');
 	});
-	$('.home-button img').click(function() {
-		$('.player-object video').attr('src', '');
-		$('.player').fadeOut(300);
-		$('.search').fadeIn(300);
-		$('.movies').fadeIn(300);
-		if(window.showLoadMore) {
-			$('.load-more').fadeIn(300);
-		} else {
-			$('.load-more').fadeOut(300);
-		}
+	$('.search-results').on('click', '.play-button a', function() {
+		var stream = $(this).attr('data-stream');
+		$('video').attr('src', stream);
+		$('.intro-section').fadeOut(300);
+		$('.results-section').fadeOut(300);
+		$('.player-section').fadeIn(300);
 	});
 });
