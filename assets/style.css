@@ -237,3 +237,9 @@ body {
 .home-button img {
 	cursor: pointer;
 }
+
+.advertisement {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
