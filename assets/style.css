@@ -12,80 +12,41 @@ body {
 	clear: both;
 }
 
-.intro-section {
+.main-section {
 	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	background-image: url(background.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
-.intro-section .intro-content {
-	margin-top: 150px;
-}
-
-.intro-section .intro-content .logo {
+.header {
+	width: 100%;
+	padding: 40px;
+	background-color: #3A3F45;
 	text-align: center;
 }
 
-.intro-section .intro-content .search-form {
-	text-align: center;
-}
-
-.intro-section .intro-content .search-form .search-field {
+.header .search-form .search-field {
 	position: relative;
 	width: 80%;
 	margin: auto;
 }
 
-.intro-section .intro-content .search-form .search-field input {
-	border: none;
-	outline: none;
-	font-size: 20px;
-	font-family: 'Open Sans';
-	background: none;
+.header .search-form input {
 	width: 100%;
-	color: #A9A9A9;
-	background-color: #2E2E2E;
-	padding: 10px 20px;
-	margin: auto;
-	border-radius: 5px;
-}
+	padding: 10px;
+	color: #FFF;
+	background-color: #393A40;
+	border: none;
+	border-radius: 3px;
+	outline: none;
+}	
 
-.intro-section .intro-content .search-form .search-field .loading-search {
+.header .search-form .loading-search {
 	position: absolute;
 	right: 10px;
 	top: 8px;
 	display: none;
 }
 
-.results-section {
-	display: none;
-	width: 100%;
-}
-
-.collapsed-header {
-	width: 100%;
-	height: 156px;
-	padding: 40px;
-	background-color: #3A3F45;
-	text-align: center;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
-
-.collapsed-header img {
-	cursor: pointer;
-}
-
 .search-results {
-	position: absolute;
-	top: 156px;
-	left: 0px;
 	width: 100%;
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -196,22 +157,17 @@ body {
 }
 
 .no-results {
-	position: absolute;
-	top: 186px;
-	left: 50%;
 	width: 80%;
-	margin-left: -40%;
 	padding: 20px;
 	background-color: #;
 	border-radius: 5px;
 	background-color: #393A40;
 	color: #FFF;
+	margin: auto;
+	display: none;
 }
 
 .player {
-	position: absolute;
-	top: 156px;
-	left: 0px;
 	padding-top: 40px;
 	padding-bottom: 40px;
 	text-align: center;
@@ -239,7 +195,10 @@ body {
 }
 
 .advertisement {
+	margin: auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	text-align: center;
+	width: 80%;
+	overflow: hidden;
 }
