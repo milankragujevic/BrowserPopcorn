@@ -33,7 +33,7 @@ body {
 	width: 100%;
 	padding: 10px;
 	color: #FFF;
-	background-color: #393A40;
+	background-color: #292C34;
 	border: none;
 	border-radius: 3px;
 	outline: none;
@@ -52,7 +52,7 @@ body {
 	padding-bottom: 40px;
 }
 
-.search-results .search-result {
+.search-result {
 	background-color: #393A40;
 	width: 80%;
 	margin: auto;
@@ -61,31 +61,31 @@ body {
 	margin-bottom: 40px;
 }
 
-.search-results .search-result .movie-poster img {
+.search-result .movie-poster img {
 	width: 120px;
 }
 
-.search-results .search-result .movie-poster {
+.search-result .movie-poster {
 	float: left;
 	margin-right: 20px;
 	width: 120px;
 }
 
-.search-results .search-result .movie-informations {
+.search-result .movie-informations {
 	float: left;
 	width: calc(100% - 140px);
 } 
 
-.search-results .search-result .movie-informations .movie-title {
+.search-result .movie-informations .movie-title {
 	color: #FFF;
 	font-size: 20px;
 }
 
-.search-results .search-result .movie-informations .movie-info-section {
+.search-result .movie-informations .movie-info-section {
 	margin-top: 5px;
 }
 
-.search-results .search-result .movie-informations .movie-info-section .movie-stars {
+.search-result .movie-informations .movie-info-section .movie-stars {
 	width: 120px;
 	background-image: url(star-empty.png);
 	height: 7px;
@@ -95,7 +95,7 @@ body {
 	margin-top: 5px;
 }
 
-.search-results .search-result .movie-informations .movie-info-section .movie-stars .movie-stars-full {
+.search-result .movie-informations .movie-info-section .movie-stars .movie-stars-full {
 	background-image: url(star.png);
 	height: 7px;
 	position: absolute;
@@ -103,7 +103,7 @@ body {
 	left: 0px;
 }
 
-.search-results .search-result .movie-informations .movie-info-section .movie-rating {
+.search-result .movie-informations .movie-info-section .movie-rating {
 	color: #7A7A7F;
 	font-weight: bold;
 	font-size: 12px;
@@ -111,7 +111,7 @@ body {
 	margin-right: 20px;
 }
 
-.search-results .search-result .movie-informations .movie-info-section .movie-runtime {
+.search-result .movie-informations .movie-info-section .movie-runtime {
 	color: #7A7A7F;
 	font-weight: bold;
 	font-size: 12px;
@@ -119,27 +119,27 @@ body {
 	margin-right: 20px;
 }
 
-.search-results .search-result .movie-informations .movie-info-section .movie-genres {
+.search-result .movie-informations .movie-info-section .movie-genres {
 	color: #7A7A7F;
 	font-weight: bold;
 	font-size: 12px;
 	float: left;
 }
 
-.search-results .search-result .movie-informations .movie-plot p {
+.search-result .movie-informations .movie-plot p {
 	margin: 0px;
 	color: #FFF;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
-.search-results .search-result .movie-informations .movie-info-section-second {
+.search-result .movie-informations .movie-info-section-second {
 	color: #7A7A7F;
 	font-weight: bold;
 	font-size: 12px;
 }
 
-.search-results .search-result .movie-informations .play-button a {
+.search-result .movie-informations .play-button a {
 	margin-top: 10px;
 	display: block;
 	color: #FFF;
@@ -152,7 +152,7 @@ body {
 	transition: all .3s ease;
 }
 
-.search-results .search-result .movie-informations .play-button a:hover {
+.search-result .movie-informations .play-button a:hover {
 	background-color: #008934;
 }
 
@@ -201,4 +201,69 @@ body {
 	text-align: center;
 	width: 80%;
 	overflow: hidden;
+}
+
+.episodes-section {
+	width: 100%;
+	display: none;
+}
+
+.episodes-season .search-result {
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+.episodes-inner {
+	background-color: #393A40;
+	width: 80%;
+	margin: auto;
+	border-radius: 5px;
+	padding: 30px;
+	margin-bottom: 40px;
+}
+
+.episodes-inner .seasons-items {
+	width: calc(50% - 10px);
+	float: left;
+}
+
+.episodes-inner .seasons-items .season-item a {
+	background-color: #292C31;
+	padding: 10px 15px;
+	color: #73767D;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	display: block;
+	text-decoration: none;
+	transition: all .1s ease;
+	text-align: center;
+}
+
+.episodes-inner .seasons-items .season-item a:hover, .episodes-inner .seasons-items .season-item.active a {
+	background-color: #1C1F21;
+}
+
+.episodes-inner .episodes-items {
+	width: calc(50% - 10px);
+	float: right;
+}
+
+.episodes-inner .episodes-items .episode-item a {
+	background-color: #292C31;
+	padding: 10px 15px;
+	color: #73767D;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	display: block;
+	text-decoration: none;
+	transition: all .1s ease;
+	text-align: center;
+}
+
+.episodes-inner .episodes-items .episode-item a:hover {
+	background-color: #1C1F21;
+}
+
+.episodes-loading {
+	text-align: center;
 }
