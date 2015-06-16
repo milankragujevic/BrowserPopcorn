@@ -71,7 +71,7 @@ $(document).ready(function() {
 			$('.episodes-section .episodes-items').html(episodes_1);
 		}
 	});
-	$('.episodes-section .seasons-items').on('click', '.season-item', function() {
+	$('.episodes-section .seasons-items').on('click', '.season-item', function(e) {
 		$('.episodes-section .seasons-items .season-item.active').removeClass('active');
 		$(this).addClass('active');
 		var id = $('.episodes-section').attr('data-id');
@@ -82,6 +82,8 @@ $(document).ready(function() {
 			episodes += '<div class="episode-item' + (episode == 1 ? ' active' : '') + '"><a href="#" data-id="' + item.id + '"  data-imdbID="' + item.imdbID + '" data-season="' + season + '" data-episode="' + episode + '" data-stream="' + stream + '">Episode ' + episode + '</a></div>';
 		});
 		$('.episodes-section .episodes-items').html(episodes);
+		e.preventDefault();
+		return false;
 	});
 	$('.episodes-section .episodes-items').on('click', '.episode-item', function() {
 		var id = $(this).find('a').attr('data-id');
@@ -93,5 +95,9 @@ $(document).ready(function() {
 		$('.player-section').fadeIn(300);
 		$('.episodes-section').fadeOut(300);
 		$('video').attr('src', stream);
+	});
+	$('.adblock-dismiss').click(function() {
+		Cookies.set('pt_abD', 'true');
+		$('.adblock-message-overlay').fadeOut(300);
 	});
 });

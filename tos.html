@@ -44,88 +44,29 @@
 	</div>
 	<style>.loading-screen{z-index:900000;position:fixed;top:0px;left:0px;width:100%;height:100%;background-color:#292A2E;font-family:'Arial'!important;}.loading-screen .loading-contents{width:152px;height:128px;color:#FFF;position:absolute;top:50%;left:50%;margin-top:-64px;margin-left:-76px;text-align:center;}.loading-screen .loading-contents span{font-size:25px;margin-bottom:10px;display:block;}</style><div class="loading-screen"><div class="loading-contents"><span>Loading...</span><br><img src="data:image/gif;base64,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"/></div></div>
 	<div class="header">
-		<img src="assets/logo.png" class="logo" />
-		<div class="search-form">
-			<div class="search-field">
-				<input type="text" class="query" placeholder="Search shows or movies by title, genres, actors..." />
-				<div class="loading-search">
-					<img src="assets/loading-search.gif" />
-				</div>
-			</div>
-		</div>
+		<a href="index.html">
+			<img src="assets/logo.png" class="logo" />
+		</a>
 	</div>
-	<div class="main-section">
-		<div class="search-results">
-			<div class="advertisement">
-				<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8225192604010062" data-ad-slot="1583687960" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
-			</div>
-			<div class="search-results-inner"></div>
-			<div class="advertisement">
-				<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8225192604010062" data-ad-slot="1583687960" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
-			</div>
-		</div>
-		<div class="no-results">Oops. It looks like we don't have that movie/show. Try another one.</div>
-	</div>
-	<div class="player-section">
-		<div class="player">
-			<div class="advertisement">
-				<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8225192604010062" data-ad-slot="1583687960" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
-			</div>
-			<div class="player-inner">
-				<video width="80%" autoplay controls preload src="" type="video/mp4" />
-			</div>
-			<div class="advertisement">
-				<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8225192604010062" data-ad-slot="1583687960" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
-			</div>
-			<div class="home-button">
-				<img src="assets/home.png" width="32px" height="32px" />
-			</div>
-		</div>
-	</div>
-	<div class="episodes-section">
-		<div class="episodes">
-			<div class="advertisement">
-				<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8225192604010062" data-ad-slot="1583687960" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
-			</div>
-			<div class="search-result">
-				<div class="movie-poster">
-					<img src="">
-				</div>
-				<div class="movie-informations">
-					<div class="movie-title"></div>
-					<div class="movie-info-section">
-						<div class="movie-stars">
-							<div class="movie-stars-full" style="width:0%"></div>
-						</div>
-						<div class="movie-rating">
-							<span class="movie-rating-value"></span>/10
-						</div>
-						<div class="movie-runtime"></div>
-						<div class="movie-genres"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="movie-plot">
-						<p></p>
-					</div>
-					<div class="movie-info-section-second">
-						Director: <span class="movie-info-director"></span>, Starring: <span class="movie-info-actors"></span>
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div class="episodes-inner">
-				<div class="seasons-items">
-				</div>
-				<div class="episodes-items">
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div class="advertisement">
-				<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8225192604010062" data-ad-slot="1583687960" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
-			</div>
-			<div class="home-button">
-				<img src="assets/home.png" width="32px" height="32px" />
-			</div>
+	<div class="page-section">
+		<div class="page-inner">
+			<h1>Terms of Service</h1>
+			<h3>Your Acceptance</h3>
+			<p>By using the "POPCORN TIME" website you signify your agreement to (1) these terms and conditions (the "Terms of Service").</p>
+			<h3>Privacy Policy</h3>
+			<p>You understand that by using "POPCORN TIME" you may encounter material that you may deem to be offensive, indecent, or objectionable, and that such content may or may not be identified as having explicit material. "POPCORN TIME" will have no liability to you for such material – you agree that your use of "POPCORN TIME" is at your sole risk.</p>
+			<p>BY USING "POPCORN TIME" YOU AGREE THAT ANY AND ALL INFORMATION PROVIDED BY YOUR BROWSER (INCLUDING BUT NOT LIMITED TO IP ADDRESS, LOCATION DATA, USER AGENT STRING, COOKIES, PREVIOUSLY VISITED PAGES) WILL BE COLLECTED. YOU ALSO AGREE THAT GOOGLE INC., MAY COLLECT THE PREVIOUSLY MENTIONED INFORMATION WITH "GOOGLE ANALYTICS" AND MAY SHARE THAT INFORMATION WITH THIRD PARTIES. </p>
+			<h3>DISCLAIMERS</h3>
+			<p>YOU EXPRESSLY AGREE THAT YOUR USE OF "POPCORN TIME" IS AT YOUR SOLE RISK. "POPCORN TIME" AND ALL PRODUCTS ARE PROVIDED TO YOU "AS IS" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. "POPCORN TIME" MAKES ABSOLUTELY NO WARRANTIES WHATSOEVER, EXPRESS OR IMPLIED. TO THE FULLEST EXTENT POSSIBLE UNDER APPLICABLE LAWS, YIFY DISCLAIMS ALL WARRANTIES, EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR OTHER VIOLATIONS OF RIGHTS.</p>
+			<p>BY USING "POPCORN TIME" YOU ALSO AGREE THAT YOU WILL NOT DISCLOSE ANY IDENTIFYING INFORMATION ABOUT THE SERVERS HOSTING THE VIDEO TO ANY THIRD PARTIES. </p>
+			<h3>LIMITATION OF LIABILITY</h3>
+			<p>"POPCORN TIME" IS NOT RESPONSIBLE FOR ANY PROBLEMS OR TECHNICAL MALFUNCTION OF ANY WEBSITE, NETWORK, COMPUTER SYSTEMS, SERVERS, PROVIDERS, COMPUTER EQUIPMENT, OR SOFTWARE, OR FOR ANY FAILURE DUE TO TECHNICAL PROBLEMS OR TRAFFIC CONGESTION ON THE INTERNET OR "POPCORN TIME" OR COMBINATION THEREOF, INCLUDING ANY INJURY OR DAMAGE TO USERS OR TO ANY COMPUTER OR OTHER DEVICE ON OR THROUGH WHICH "POPCORN TIME" IS PROVIDED. UNDER NO CIRCUMSTANCES WILL "POPCORN TIME" BE LIABLE FOR ANY LOSS OR DAMAGE, INCLUDING PERSONAL INJURY OR DEATH, RESULTING FROM YOUR USE OF "POPCORN TIME".</p>
+			<h3>API USAGE</h3>
+			<p>BY USING "POPCORN TIME" YOU AGREE TO THE FOLLOWING TERMS: 1. YOU WILL NOT USE THE "POPCORN TIME" API (LOCATED AT http://api.popcorntimefree.info/) OUTSIDE OF THE WEBSITE http://popcorntimefree.info/, 2. YOU WILL NOT ATTEMPT TO REVERSE ENGINEER OR ILLEGALLY (WITHOUT WRITTEN PERMISSION FROM THE AUTHOR) OBTAIN ANY INFORMATION CONCERNING THE INTERNAL FUNCTIONING OF THE API AND THE SOURCE CODE, 3. YOU WILL NOT ATTEMPT TO PREVENT OTHER USERS OF "POPCORN TIME" FROM ACCESSING THE HEREBY MENTIONED API, 4. YOU WILL NOT ATTEMPT TO ILLEGALLY (WITHOUT WRITTEN PERMISSION FROM THE AUTHOR) OBTAIN ANY USER DATA FROM THE SERVERS. </p>
+			<h3>ARBITRATION</h3>
+			<p>ALL CLAIMS AND DISPUTES ARISING UNDER OR RELATING TO THIS AGREEMENT ARE TO BE SETTLED BY BINDING ARBITRATION IN THE COUNTRY OF SERBIA OR ANOTHER LOCATION MUTUALLY AGREEABLE TO THE PARTIES. THE ARBITRATION SHALL BE CONDUCTED ON A CONFIDENTIAL BASIS PURSUANT TO THE COMMERCIAL ARBITRATION RULES OF THE SERBIAN ARBITRATION ASSOCIATION. ANY DECISION OR AWARD AS A RESULT OF ANY SUCH ARBITRATION PROCEEDING SHALL BE IN WRITING AND SHALL PROVIDE AN EXPLANATION FOR ALL CONCLUSIONS OF LAW AND FACT AND SHALL INCLUDE THE ASSESSMENT OF COSTS, EXPENSES, AND REASONABLE ATTORNEYS' FEES. ANY SUCH ARBITRATION SHALL BE CONDUCTED BY AN ARBITRATOR EXPERIENCED IN COPYRIGHT AND VIDEO STREAMING AND SHALL INCLUDE A WRITTEN RECORD OF THE ARBITRATION HEARING. THE PARTIES RESERVE THE RIGHT TO OBJECT TO ANY INDIVIDUAL WHO SHALL BE EMPLOYED BY OR AFFILIATED WITH A COMPETING ORGANIZATION OR ENTITY. AN AWARD OF ARBITRATION MAY BE CONFIRMED IN A COURT OF COMPETENT JURISDICTION.</p>
+			<h3>Ability to Accept Terms of Service</h3>
+			<p>By using "POPCORN TIME" or accessing this site you affirm that you are either more than 18 years of age, or an emancipated minor, or possess legal parental or guardian consent, and are fully able and competent to enter into the terms, conditions, obligations, affirmations, representations, and warranties set forth in these Terms of Service, and to abide by and comply with these Terms of Service. In any case, you affirm that you are over the age of 13, as the Service is not intended for children under 13. If you are under 13 years of age, then please do not use the Service. There are lots of other great web sites for you. Talk to your parents about what sites are appropriate for you.</p>
 		</div>
 	</div>
 	<div class="footer">
@@ -137,17 +78,14 @@
 		</p>
 		<div class="clearfix"></div>
 	</div>
-	<script>window.ads_blocked=true</script>
 	<script src="assets/jquery.js"></script>
 	<script src="assets/ie10-viewport.js"></script>
 	<script src="assets/php.js"></script>
-	<script src="assets/adsbygoogle.js"></script>
 	<script src="assets/cookie.js"></script>
 	<script src="assets/scripts.js"></script>
 	<link rel="stylesheet" href="assets/fonts.css" />
 	<link rel="stylesheet" href="assets/style.css" />
 	<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-54551427-12','auto');ga('send','pageview')</script>
 	<script>$(window).load(function(){$('.loading-screen').fadeOut(300)})</script>
-	<script>if(window.ads_blocked&&!Cookies.get('pt_abD')){$('.adblock-message-overlay').fadeIn(300)}</script>
 </body>
 </html>
