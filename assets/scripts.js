@@ -5,7 +5,7 @@ function loadMovies() {
 	$('.loading-search').fadeIn(300);
 	$('.search-results-inner').html('');
 	var queryComponent = '';
-	if(!query != '') {
+	if(query != '') {
 		queryComponent = '?query=' + encodeURIComponent(query);
 	}
 	$.get('http://api.popcorntimefree.info/content.php' + queryComponent, function(items) {
