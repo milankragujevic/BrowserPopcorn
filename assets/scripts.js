@@ -1,11 +1,14 @@
-window.api_key = 'NQ3KV4co5T724jZWZFdR7g462o39Uz63';
 window.items = {};
 
 function loadMovies() {
 	var query = $('.search-field input').val();
 	$('.loading-search').fadeIn(300);
 	$('.search-results-inner').html('');
-	$.get('http://api.popcorntimefree.info/content.php?query=' + encodeURIComponent(query) + '&key=' + window.api_key, function(items) {
+	var queryComponent = '';
+	if(!query != '') {
+		queryComponent = '?query=' + encodeURIComponent(query);
+	}
+	$.get('http://api.popcorntimefree.info/content.php' + queryComponent, function(items) {
 		if(items == null) {
 			$('.no-results').fadeIn(300);
 		} else {
