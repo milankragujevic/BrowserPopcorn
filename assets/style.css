@@ -344,3 +344,7 @@ body {
 	margin-top: 60px;
 	margin-bottom: 60px;
 }
+
+.404-page {
+	display: none;
+}
