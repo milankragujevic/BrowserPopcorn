@@ -6,9 +6,9 @@ function loadMovies() {
 	$('.search-results-inner').html('');
 	var queryComponent = '';
 	if(query.length > 0) {
-		queryComponent = '?query=' + encodeURIComponent(query);
+		queryComponent = 'query=' + encodeURIComponent(query) + '&';
 	}
-	$.get('http://api.popcorntimefree.info/content.php' + queryComponent, function(items) {
+	$.get('https://api.popcorntimefree.info/content.php?' + queryComponent + 'key=' + window.API_KEY, function(items) {
 		if(items == null) {
 			$('.no-results').fadeIn(300);
 		} else {
@@ -20,14 +20,12 @@ function loadMovies() {
 			});
 		}
 		$('.main-section').fadeIn(300);
-		$('.page-section').fadeOut(300);
 		$('.loading-search').fadeOut(300);
 	});
 }
 
 function selectTVShow(item) {
 	$('.main-section').fadeOut(300);
-	$('.page-section').fadeOut(300);
 	$('.episodes-section').fadeIn(300);
 	$('.episodes-section').attr('data-imdbID', item.imdbID);
 	$('.episodes-section .movie-informations .movie-title').html(item.title);
@@ -81,7 +79,6 @@ function playEpisode(_this) {
 	var stream = item.episodes[season][episode];
 	$('.main-section').fadeOut(300);
 	$('.player-section').fadeIn(300);
-	$('.page-section').fadeOut(300);
 	$('.episodes-section').fadeOut(300);
 	$('video').attr('src', stream);
 }	
@@ -90,14 +87,12 @@ function playMovie(item) {
 	var stream = item.stream;
 	$('video').attr('src', stream);
 	$('.main-section').fadeOut(300);
-	$('.page-section').fadeOut(300);
 	$('.player-section').fadeIn(300);
 }
 
 function goHome() {
 	$('.main-section').fadeIn(300);
 	$('.player-section').fadeOut(300);
-	$('.page-section').fadeOut(300);
 	$('.episodes-section').fadeOut(300);
 	$('video').attr('src', '');
 	$('.search-field input').val('');
@@ -106,7 +101,6 @@ function goHome() {
 function show404() {
 	$('.main-section').fadeOut(300);
 	$('.player-section').fadeOut(300);
-	$('.page-section').fadeOut(300);
 	$('.episodes-section').fadeOut(300);
 	$('video').attr('src', '');
 	$('.search-field input').val('');
@@ -151,7 +145,7 @@ $(document).ready(function() {
 		if(type == 'item') {
 			var id = decodeURIComponent(hash[1]);
 			if(typeof window.items[id] == 'undefined' || !window.items[id]) {
-				$.get('http://api.popcorntimefree.info/content.php?query=' + id, function(items) {
+				$.get('https://api.popcorntimefree.info/content.php?query=' + id + '&key=' + window.API_KEY, function(items) {
 					if(items.length < 1) {
 						goHome();
 						loadMovies();
