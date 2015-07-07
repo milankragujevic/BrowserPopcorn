@@ -12,7 +12,7 @@ function generateSecureStream($file) {
 	$expires = time() + 60 * 60 * 6;
 	$ip = $_SERVER['HTTP_CF_CONNECTING_IP'];
 	$token = str_replace('=', '', strtr(base64_encode(md5($stream_key . $full_url . $expires . $ip, true)), '+/', '-_'));
-	return 'http://cdn-lb-1.popcorntimefree.info' . $full_url . '?token=' . $token . '&expires=' . $expires;
+	return 'http://cdn.popcorntimefree.info' . $full_url . '?token=' . $token . '&expires=' . $expires;
 }
 
 function getMovies() {
