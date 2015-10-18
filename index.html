@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8" />
+	<title>Popcorn Time</title>
+	<script src="assets/jquery.js" async></script>
+	<script src="assets/app.js?v=3.1" async></script>
+	<link rel="stylesheet" href="https://vjs.zencdn.net/5.0.0/video-js.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin-ext,latin" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="assets/style.css?v=3.21" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<meta name="description" content="The latest Popcorn Time version, available in your browser! Skip the downloads! Watch the best movies instantly in HD, for free!" />
+	<meta name="keywords" content="popcorn time, popcorn, movies, tv shows, streaming, free, torrents, popcorn in your browser">
+	<link rel="image_src" href="https://browserpopcorn.xyz/assets/cover.jpg" / >
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@milankragujevic">
+    <meta name="twitter:title" content="Popcorn Time - Watch movies and TV shows instantly!">
+    <meta name="twitter:description" content="Skip the downloads! Watch the best movies instantly in HD, for free! Now available in your browser!">
+    <meta name="twitter:creator" content="@milankragujevic">
+    <meta name="twitter:image:src" content="https://browserpopcorn.xyz/assets/cover.jpg">
+    <meta property="og:title" content="Popcorn Time - Watch movies and TV shows instantly!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://browserpopcorn.xyz/" />
+    <meta property="og:image" content="https://browserpopcorn.xyz/assets/cover.jpg" />
+    <meta property="og:description" content="Skip the downloads! Watch the best movies instantly in HD, for free! Now available in your browser!" />
+    <meta property="og:site_name" content="Popcorn Time" />
+    <meta property="fb:admins" content="100004188615429"/>
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=781121798648453";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<div class="loading">
+		<div class="content">
+			<img src="assets/loading.svg" />
+			<h2>Loading data...</h2>
+		</div>
+	</div>
+	<div class="header">
+		<h1>Popcorn Time</h1>
+	</div>
+	<div class="sidebar">
+		<div class="search">
+			<input type="text" class="sform" placeholder="Search..."/>
+			<i class="fa fa-search"></i>
+		</div>
+		<h4>Genres</h4>
+		<a href="#" class="active">Popular</a>
+		<a href="#">Action</a>
+		<a href="#">Adventure</a>
+		<a href="#">Animation</a>
+		<a href="#">Biography</a>
+		<a href="#">Comedy</a>
+		<a href="#">Crime</a>
+		<a href="#">Documentary</a>
+		<a href="#">Drama</a>
+		<a href="#">Family</a>
+		<a href="#">Fantasy</a>
+		<a href="#">Film-Noir</a>
+		<a href="#">History</a>
+		<a href="#">Horror</a>
+		<a href="#">Music</a>
+		<a href="#">Musical</a>
+		<a href="#">Mystery</a>
+		<a href="#">Romance</a>
+		<a href="#">Sci-Fi</a>
+		<a href="#">Short</a>
+		<a href="#">Sport</a>
+		<a href="#">Thriller</a>
+		<a href="#">War</a>
+		<a href="#">Western</a>
+	</div>
+	<div class="main">
+		<div class="single-darken"></div>
+		<div class="single">
+			<div class="close"><i class="fa fa-times"></i></div>
+			<div class="poster">
+				<img src="" />
+			</div>
+			<div class="watch-button" data-id="">WATCH IT NOW</div>
+			<div class="title"></div>
+			<div class="year"></div>
+			<div class="plot">
+				<p></p>
+			</div>
+		</div>
+		<div class="movies">
+		</div>
+		<div class="player">
+			<div class="close"><i class="fa fa-times"></i></div>
+			<div class="video-wrapper">
+			</div>
+		</div>
+	</div>
+	<div class="advertisement">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- skyscraper-300x600 -->
+		<ins class="adsbygoogle"
+			 style="display:inline-block;width:300px;height:600px"
+			 data-ad-client="ca-pub-8225192604010062"
+			 data-ad-slot="3926974766"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	<div class="footer">
+		<div class="fb-like" data-href="https://browserpopcorn.xyz/" data-width="60" data-layout="standard" data-action="like" data-show-faces="false" data-share="false" data-colorscheme="dark"></div>
+		<p>&copy; 2015 <a href="https://milankragujevic.com/" target="_blank" rel="author">Milan Kragujević</a> | <a href="https://github.com/milankragujevic/browserpopcorn">Github</a></p>
+	</div>
+	<script src="https://vjs.zencdn.net/5.0.0/video.js" async></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-54551427-22', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>
