@@ -4,11 +4,12 @@
 	<meta charset="utf8" />
 	<title>Popcorn Time</title>
 	<script src="assets/jquery.js" async></script>
-	<script src="assets/app.js?v=3.1" async></script>
+	<script src="assets/app.js?v=3.3" async></script>
 	<link rel="stylesheet" href="https://vjs.zencdn.net/5.0.0/video-js.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin-ext,latin" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="assets/style.css?v=3.21" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,700italic&subset=latin,latin-ext" />
+	<link rel="stylesheet" href="assets/style.css?v=3.3" />
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<meta name="description" content="The latest Popcorn Time version, available in your browser! Skip the downloads! Watch the best movies instantly in HD, for free!" />
 	<meta name="keywords" content="popcorn time, popcorn, movies, tv shows, streaming, free, torrents, popcorn in your browser">
@@ -36,6 +37,14 @@
 	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=781121798648453";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
+	<div class="dialog error-loading-data">
+		<div class="dialog-contents">
+			<div class="close"><i class="fa fa-times"></i></div>
+			<h1>Error loading data...</h1>
+			<p>We're sorry, but Popcorn Time is unable to fetch movie information from the application servers. You've either gone offline or something is not working correctly on our end. </p>
+			<p>Try reloading the page by pressing F5, and if that doesn't work, contact us at milankragujevic@gmail.com. </p>
+		</div>
+	</div>
 	<div class="loading">
 		<div class="content">
 			<img src="assets/loading.svg" />
@@ -99,19 +108,16 @@
 		</div>
 	</div>
 	<div class="advertisement">
+		<div class="close"><i class="fa fa-times"></i></div>
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- skyscraper-300x600 -->
+		<!-- leaderboard-728x90 -->
 		<ins class="adsbygoogle"
-			 style="display:inline-block;width:300px;height:600px"
+			 style="display:inline-block;width:728px;height:90px"
 			 data-ad-client="ca-pub-8225192604010062"
-			 data-ad-slot="3926974766"></ins>
+			 data-ad-slot="4507227562"></ins>
 		<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
-	</div>
-	<div class="footer">
-		<div class="fb-like" data-href="https://browserpopcorn.xyz/" data-width="60" data-layout="standard" data-action="like" data-show-faces="false" data-share="false" data-colorscheme="dark"></div>
-		<p>&copy; 2015 <a href="https://milankragujevic.com/" target="_blank" rel="author">Milan Kragujević</a> | <a href="https://github.com/milankragujevic/browserpopcorn">Github</a></p>
 	</div>
 	<script src="https://vjs.zencdn.net/5.0.0/video.js" async></script>
 	<script>
