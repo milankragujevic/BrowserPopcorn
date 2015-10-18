@@ -9,6 +9,10 @@ body {
 	overflow: hidden;
 }
 
+.clearfix {
+	clear: both;
+}
+
 .loading {
 	position: absolute;
 	top: 0px;
@@ -46,7 +50,7 @@ body {
 	width: 100%;
 	height: 43px;
 	border: solid 1px #000;
-	padding-top: 13px;
+	padding-top: 10px;
 	text-align: center;
 	overflow: hidden;
 	background-image: linear-gradient(to bottom, #282828, #1E1E1E);
@@ -57,6 +61,34 @@ body {
 	margin: 0px;
 	font-size: 13px;
 	font-weight: 400;
+}
+
+.header .like-button {
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	width: 48px;
+	overflow: hidden;
+}
+
+.header .social {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.header .social a {
+	text-decoration: none;
+	color: #FFF;
+	float: left;
+	margin-right: 10px;
+	display: block;
+	opacity: 0.7;
+	transition: opacity .2s ease-in-out;
+}
+
+.header .social a:hover {
+	opacity: 1;
 }
 
 .sidebar {
