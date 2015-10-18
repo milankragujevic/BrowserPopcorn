@@ -1,6 +1,6 @@
 # BrowserPopcorn
 
-![BrowserPopcorn](https://browserpopcorn.xyz/assets/cover.jpg)
+![BrowserPopcorn](https://raw.githubusercontent.com/milankragujevic/BrowserPopcorn/master/assets/cover.jpg)
 
 The latest Popcorn Time version, available in your browser! Skip the downloads! Watch the best movies instantly in HD, for free!
 
