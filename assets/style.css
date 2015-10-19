@@ -324,6 +324,25 @@ body {
 	width: 220px;
 }
 
+.single .imdb-button {
+    text-decoration: none;
+	position: absolute;
+	top: 400px; /* add 57*/
+	left: 0px;
+	color: #0c0b00;
+	display: block;
+	font-weight: bold;
+	font-size: 18px;
+	width: 100%;
+	padding: 15px;
+	text-align: center;
+	background-color: #deb522;
+	transition: background-color .2s ease-in-out;
+	cursor: pointer;
+}
+.single .imdb-button:hover {
+background-color: #b79007
+}
 .single .watch-button {
 	position: absolute;
 	top: 348px;
@@ -346,7 +365,7 @@ body {
 
 .single .title {
 	position: absolute;
-	top: 405px;
+	top: 462px;
 	left: 10px;
 	color: #FFF;
 	display: block;
@@ -359,7 +378,7 @@ body {
 
 .single .year {
 	position: absolute;
-	top: 425px;
+	top: 487px;
 	left: 10px;
 	color: #999994;
 	font-size: 14px;
@@ -367,9 +386,9 @@ body {
 
 .single .plot {
 	position: absolute;
-	top: 450px;
+	top: 512px;
 	left: 10px;
-	height: calc(100% - 460px);
+	height: calc(100% - 512px);
 	width: calc(100% - 20px);
 	overflow: auto;
 }

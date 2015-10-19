@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		var movie = window.store[id];
 		$('.single .poster img').attr('src', movie.Poster);
 		$('.single .watch-button').attr('data-id', id);
+        $('.single .imdb-button').attr('href', 'http://www.imdb.com/title/'+id+'/');
 		$('.single .title').html(movie.Title);
 		$('.single .year').html(movie.Year);
 		$('.single .plot p').html(movie.Plot);
