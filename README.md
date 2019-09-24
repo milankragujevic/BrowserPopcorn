@@ -1,15 +1,12 @@
 # BrowserPopcorn
 
-![BrowserPopcorn](http://popcorntimefree.info/assets/preview.jpg)
+![BrowserPopcorn](https://raw.githubusercontent.com/milankragujevic/BrowserPopcorn/master/assets/cover.jpg)
 
-Popcorn Time now works in your browser! Watch the best movies instantly in HD, for free!
+The latest Popcorn Time version, available in your browser! Skip the downloads! Watch the best movies instantly in HD, for free!
 
-Source code of http://popcorntimefree.info/
+Source code of https://browserpopcorn.xyz
 
-## Where's the API?
-Unfortunatelly, the API is currently closed source, not because I'm doing something evil, but simply because I haven't had the time for a proper security audit and wouldn't like somebody hacking my server. 
-I need to keep the security on the servers tight so that the identities of the users and the servers' locations are protected.
+## License
+Copyright &copy; 2014-2015 Milan Kragujević. All rights reserved. 
 
-MPAA and other evil entities, the popcorncdn.ga server is just a proxy, don't bother taking it down, I'll get a new one in hours. The real servers are well hidden and will remain so.
-
-Any API version published in the future will be stripped down of identifiable information.
+Redistribution is strictly forbidden unless you have obtained a written permission from the Author (Milan Kragujević, milankragujevic@gmail.com).
